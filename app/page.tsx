@@ -5,6 +5,7 @@ import AboutUs from "@/components/aboutUs";
 import HowItHappensComponent from "@/components/howItHappensComponent";
 import DarkModeComponent from "@/components/darkModeComponent";
 import HowWeDoItComponent from "@/components/howWeDoItComponent";
+import Products from "@/components/products";
 
 export default function Home() {
 
@@ -23,22 +24,26 @@ export default function Home() {
 
 
   return (
-    <main className={`w-full h-full dark:text-white scroll-smooth`}>
+    <div className={`w-full h-full dark:text-white scroll-smooth`}>
 
       <Header />
 
-      <DarkModeComponent />
+      <main>
+        <DarkModeComponent />
 
-      <SwippingImages />
+        <SwippingImages />
 
-      <AboutUs />
+        <AboutUs />
 
-      <HowItHappensComponent />
+        <HowItHappensComponent />
 
-      <HowWeDoItComponent />
+        <HowWeDoItComponent />
+
+        <Products />
+      </main>
 
       <Footer />
-    </main>
+    </div>
   );
 
 }

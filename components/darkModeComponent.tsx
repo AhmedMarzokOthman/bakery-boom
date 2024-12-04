@@ -35,9 +35,9 @@ export default function DarkModeComponent() {
     }, [isDark]);
 
     return (
-        <div className="font-bold font-alexandria cursor-pointer fixed bottom-4 right-4" onClick={toggleDarkMode}>
+        <button className="font-bold font-alexandria cursor-pointer fixed bottom-4 right-4" onClick={toggleDarkMode}>
             {isDark ? <Sun className="" style={{ height: '25px', width: '25px' }} />
                 : <Moon className="" style={{ height: '25px', width: '25px' }} />}
-        </div>
+        </button>
     )
 }

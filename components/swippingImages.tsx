@@ -64,7 +64,7 @@ export default function SwippingImages() {
 
     if (isDesktop) {
         return (
-            <div>
+            <article>
                 <Carousel
                     plugins={[plugin.current]}
                     setApi={setApi}
@@ -81,7 +81,9 @@ export default function SwippingImages() {
                                     <Image
                                         src={image}
                                         alt="Background"
-                                        fill
+                                        // fill
+                                        width={2000}
+                                        height={2000}
                                         sizes="100vw"
                                         priority={index === 0}
                                         className="rounded-xl object-cover"
@@ -94,7 +96,7 @@ export default function SwippingImages() {
                                     </div>
                                     <div className="fixed flex gap-2 items-center bottom-0 pb-10">
                                         {images.map((_, index) => (
-                                            <div
+                                            <button
                                                 key={index}
                                                 className={`w-5 h-2 rounded-full opacity-70 hover:opacity-80 cursor-pointer ${index === currentImageIndex ? "bg-white" : "bg-white/50"}`}
                                                 onClick={() => scrollTo(index)}
@@ -106,13 +108,13 @@ export default function SwippingImages() {
                         ))}
                     </CarouselContent>
                 </Carousel>
-            </div>
+            </article>
         )
     }
 
     if (isTablet) {
         return (
-            <div>
+            <article>
                 <Carousel
                     plugins={[plugin.current]}
                     setApi={setApi}
@@ -142,7 +144,7 @@ export default function SwippingImages() {
                                     </div>
                                     <div className="fixed flex gap-2 items-center bottom-0 pb-10">
                                         {images.map((_, index) => (
-                                            <div
+                                            <button
                                                 key={index}
                                                 className={`w-5 h-2 rounded-full opacity-70 hover:opacity-80 cursor-pointer ${index === currentImageIndex ? "bg-white" : "bg-white/50"}`}
                                                 onClick={() => scrollTo(index)}
@@ -154,13 +156,13 @@ export default function SwippingImages() {
                         ))}
                     </CarouselContent>
                 </Carousel>
-            </div>
+            </article>
         )
     }
 
     if (isMobile) {
         return (
-            <div>
+            <article>
                 <Carousel
                     plugins={[plugin.current]}
                     setApi={setApi}
@@ -193,7 +195,7 @@ export default function SwippingImages() {
                         ))}
                     </CarouselContent>
                 </Carousel>
-            </div>
+            </article>
         )
     }
 }

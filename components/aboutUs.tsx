@@ -1,8 +1,10 @@
 "use client"
 
-import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useResponsive } from "./hooks/useResponsive";
+
 export default function AboutUs() {
+    const { isMobile, isDesktop, isTablet } = useResponsive();
     const tools = [
         {
             text: "We use only natural ingredients that we grow Ourselves",
@@ -27,24 +29,9 @@ export default function AboutUs() {
 
     ];
 
-    const [isMobile, setIsMobile] = useState(false);
-    const [isDesktop, setIsDesktop] = useState(false);
-    const [isTablet, setIsTablet] = useState(false);
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768 && window.innerWidth >= 500 || window.innerWidth <= 500);
-            setIsDesktop(window.innerWidth >= 1024);
-            setIsTablet(window.innerWidth >= 768 && window.innerWidth < 1024);
-        };
-        handleResize();
-        window.addEventListener("resize", handleResize);
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        }
-    });
     if (isDesktop) {
         return (
-            <div id="about" className="flex flex-col justify-center mt-16">
+            <article id="about" className="flex flex-col justify-center mt-16">
                 <div className="inline-flex flex-col items-center">
                     <p className="text-4xl font-brush">About us</p>
                     <hr className="w-16 h-0.5 bg-current text-yellow-500 rounded-full" />
@@ -69,13 +56,13 @@ export default function AboutUs() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </article>
         )
     }
 
     if (isTablet) {
         return (
-            <div id="about" className="flex flex-col justify-center mt-16 mb-16">
+            <article id="about" className="flex flex-col justify-center mt-16 mb-16">
                 <div className="inline-flex flex-col items-center">
                     <p className="text-4xl font-brush">About us</p>
                     <hr className="w-16 h-0.5 bg-current text-yellow-500 rounded-full" />
@@ -100,13 +87,13 @@ export default function AboutUs() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </article>
         )
     }
 
     if (isMobile) {
         return (
-            <div id="about" className="flex flex-col justify-center mt-16 mb-16">
+            <article id="about" className="flex flex-col justify-center mt-16 mb-16">
                 <div className="inline-flex flex-col items-center">
                     <p className="text-4xl font-brush">About us</p>
                     <hr className="w-16 h-0.5 bg-current text-yellow-500 rounded-full" />
@@ -133,7 +120,7 @@ export default function AboutUs() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </article>
         )
     }
 }

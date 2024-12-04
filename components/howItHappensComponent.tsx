@@ -3,30 +3,16 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { IoPlayCircleOutline } from "react-icons/io5";
+import { useResponsive } from "./hooks/useResponsive";
 
 
 
 export default function HowItHappensComponent() {
-
-    const [isMobile, setIsMobile] = useState(false);
-    const [isDesktop, setIsDesktop] = useState(false);
-    const [isTablet, setIsTablet] = useState(false);
-    useEffect(() => {
-        const handleResize = () => {
-            setIsDesktop(window.innerWidth >= 1024);
-            setIsMobile(window.innerWidth <= 768 && window.innerWidth >= 500 || window.innerWidth <= 500);
-            setIsTablet(window.innerWidth >= 768 && window.innerWidth < 1024);
-        };
-        handleResize();
-        window.addEventListener("resize", handleResize);
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        }
-    });
+    const { isMobile, isDesktop, isTablet } = useResponsive();
 
     if (isDesktop) {
         return (
-            <div
+            <article
                 id="how-it-happens"
                 className="relative overflow-hidden h-[90vh] flex justify-center rounded-lg mb-16 mr-16 ml-16"
             >
@@ -34,7 +20,7 @@ export default function HowItHappensComponent() {
                     src="/breadDough2.png"
                     alt="Background"
                     fill
-                    sizes="100vw"
+                    sizes="100vw"  
                     className="rounded-lg object-cover"
                 />
                 <div className="absolute top-0 left-0 w-full h-full bg-black/40" />
@@ -50,13 +36,13 @@ export default function HowItHappensComponent() {
                     <p className="text-5xl font-bold font-brush text-[#d0d0d0]">How It Happens</p>
                     <hr className="w-10 h-0.5 bg-current text-yellow-500 rounded-full" />
                 </div>
-            </div>
+            </article>
         );
     }
 
     if (isTablet) {
         return (
-            <div
+            <article
                 id="how-it-happens"
                 className="relative overflow-hidden h-[60vh] flex justify-center rounded-lg mb-20 mt-5 mr-5 ml-5"
             >
@@ -80,13 +66,13 @@ export default function HowItHappensComponent() {
                     <p className="text-5xl font-bold font-brush text-[#d0d0d0]">How It Happens</p>
                     <hr className="w-10 h-0.5 bg-current text-yellow-500 rounded-full" />
                 </div>
-            </div>
+            </article>
         );
     }
 
     if (isMobile) {
         return (
-            <div
+            <article
                 id="how-it-happens"
                 className="relative overflow-hidden h-[40vh] flex justify-center rounded-lg mb-20 mt-5 mr-5 ml-5"
             >
@@ -110,7 +96,7 @@ export default function HowItHappensComponent() {
                     <p className="text-3xl font-bold font-brush text-[#d0d0d0]">How It Happens</p>
                     <hr className="w-10 h-0.5 bg-current text-yellow-500 rounded-full" />
                 </div>
-            </div>
+            </article>
         );
     }
 }
