@@ -4,9 +4,9 @@ import SwippingImages from "@/components/swippingImages";
 import AboutUs from "@/components/aboutUs";
 import HowItHappensComponent from "@/components/howItHappensComponent";
 import DarkModeComponent from "@/components/darkModeComponent";
-import HowWeDoItComponent from "@/components/howWeDoItComponent";
+import OnlyFreshBreadComponent from "@/components/onlyFreshBreadComponent";
 import Products from "@/components/products";
-
+import FeedbackComponent from "@/components/feedbackComponent";
 export default function Home() {
 
   const links = [{
@@ -24,7 +24,7 @@ export default function Home() {
 
 
   return (
-    <div className={`w-full h-full dark:text-white scroll-smooth`}>
+    <div id="home" className={`dark:text-white scroll-smooth`}>
 
       <Header />
 
@@ -37,9 +37,11 @@ export default function Home() {
 
         <HowItHappensComponent />
 
-        <HowWeDoItComponent />
+        <OnlyFreshBreadComponent />
 
         <Products />
+
+        <FeedbackComponent />
       </main>
 
       <Footer />

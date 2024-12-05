@@ -2,9 +2,8 @@
 
 import Image from "next/image";
 import { useResponsive } from "./hooks/useResponsive";
-import { FaMinus } from "react-icons/fa";
 
-export default function HowWeDoItComponent() {
+export default function OnlyFreshBreadComponent() {
     const { isDesktop, isMobile, isTablet } = useResponsive();
     if (isDesktop) {
         return (
@@ -25,11 +24,12 @@ export default function HowWeDoItComponent() {
                 </div>
 
                 <Image
-                    src="/breadBasket.png"
+                    src="https://img.freepik.com/premium-photo/basket-bread-buns_501761-2688.jpg"
                     alt="bread"
-                    width={600}
-                    height={600}
-                    className=""
+                    width={500}
+                    height={500}
+                    unoptimized
+                    className="rounded-lg"
                 />
             </article>
         )
@@ -53,11 +53,12 @@ export default function HowWeDoItComponent() {
                 </div>
 
                 <Image
-                    src="/breadBasket2.png"
+                    src="https://img.freepik.com/premium-photo/basket-bread-buns_501761-2688.jpg"
                     alt="bread"
-                    width={550}
-                    height={550}
-                    className=""
+                    width={300}
+                    height={300}
+                    unoptimized
+                    className="rounded-lg"
                 />
             </article>
         )
@@ -68,11 +69,12 @@ export default function HowWeDoItComponent() {
             <article className="flex flex-col mb-10">
                 <div className="flex justify-center w-[90%] mx-auto rounded-t-md overflow-hidden pr-10 pl-10">
                     <Image
-                        src="/breadBasket2.png"
+                        src="https://img.freepik.com/premium-photo/basket-bread-buns_501761-2688.jpg"
                         alt="bread"
                         width={500}
                         height={500}
-                        className="w-full"
+                        unoptimized
+                        className="w-full rounded-lg"
                     />
                 </div>
                 <div className="flex flex-col pt-5 pr-3 pl-3 w-[95%] mx-auto">

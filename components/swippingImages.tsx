@@ -17,7 +17,7 @@ import React, { useState, useCallback, useEffect } from "react";
 export default function SwippingImages() {
     const images = [
         "/bakery_sample3.png",
-        "/bakery_sample4.png",
+        "https://wallup.net/wp-content/uploads/2018/03/19/586318-bakery-bread-photography.jpg",
     ];
 
     const [isMobile, setIsMobile] = useState(false);
@@ -86,6 +86,7 @@ export default function SwippingImages() {
                                         height={2000}
                                         sizes="100vw"
                                         priority={index === 0}
+                                        unoptimized
                                         className="rounded-xl object-cover"
                                     />
                                     <div className="absolute top-0 left-0 w-full h-full bg-black/40" />
@@ -134,6 +135,7 @@ export default function SwippingImages() {
                                         fill
                                         sizes="100vw"
                                         priority={index === 0}
+                                        unoptimized
                                         className="rounded-xl object-cover"
                                     />
                                     <div className="absolute top-0 left-0 w-full h-full bg-black/40" />
@@ -182,6 +184,7 @@ export default function SwippingImages() {
                                         fill
                                         sizes="100vw"
                                         priority={index === 0}
+                                        unoptimized
                                         className="rounded-xl object-cover"
                                     />
                                     <div className="absolute top-0 left-0 w-full h-full bg-black/40" />

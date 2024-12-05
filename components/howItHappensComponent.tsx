@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image";
-import { useState, useEffect } from "react";
 import { IoPlayCircleOutline } from "react-icons/io5";
 import { useResponsive } from "./hooks/useResponsive";
 
@@ -20,7 +19,7 @@ export default function HowItHappensComponent() {
                     src="/breadDough2.png"
                     alt="Background"
                     fill
-                    sizes="100vw"  
+                    sizes="100vw"
                     className="rounded-lg object-cover"
                 />
                 <div className="absolute top-0 left-0 w-full h-full bg-black/40" />

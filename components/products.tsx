@@ -62,7 +62,7 @@ export default function Products() {
 
     if (isDesktop) {
         return (
-            <div className="flex flex-col items-center justify-center mt-16 p-10">
+            <article id="products" className="flex flex-col items-center justify-center mt-16 p-10">
                 <h1 className="text-5xl font-brush dark:text-white text-[#3f3f3f]">Product Catalog</h1>
                 <hr className="w-56 mt-3 h-0.5 bg-current border-1 border-yellow-500 text-yellow-500 rounded-full" />
                 <div className="flex flex-col items-center justify-center mt-5 text-center">
@@ -136,13 +136,13 @@ export default function Products() {
                     <hr className="text-yellow-500 w-[80%] h-0.5 bg-current border-1 border-yellow-500 rounded-full" />
 
                 </button>
-            </div>
+            </article>
         )
     }
 
     if (isTablet) {
         return (
-            <div className="flex flex-col items-center justify-center mt-16 p-10">
+            <article id="products" className="flex flex-col items-center justify-center mt-16 p-10">
                 <h1 className="text-5xl font-brush dark:text-white text-[#3f3f3f]">Product Catalog</h1>
                 <hr className="w-56 mt-3 h-0.5 bg-current border-1 border-yellow-500 text-yellow-500 rounded-full" />
                 <div className="flex flex-col items-center justify-center mt-5 text-center">
@@ -198,13 +198,13 @@ export default function Products() {
                     <hr className="text-yellow-500 w-[80%] h-0.5 bg-current border-1 border-yellow-500 rounded-full" />
 
                 </button>
-            </div>
+            </article>
         )
     }
 
     if (isMobile) {
         return (
-            <div className="flex flex-col items-center justify-center mt-16 p-10">
+            <article id="products" className="flex flex-col items-center justify-center mt-16 p-10">
                 <h1 className="text-4xl font-brush dark:text-white text-[#3f3f3f]">Product Catalog</h1>
                 <hr className="w-44 mt-3 h-0.5 bg-current border-1 border-yellow-500 text-yellow-500 rounded-full" />
                 <div className="flex flex-col items-center justify-center mt-5 text-center">
@@ -260,7 +260,7 @@ export default function Products() {
                     <hr className="text-yellow-500 w-[90%] h-0.5 bg-current border-1 border-yellow-500 rounded-full" />
 
                 </button>
-            </div>
+            </article>
         )
     }
 }
