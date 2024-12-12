@@ -4,7 +4,7 @@ import { Menu } from "lucide-react";
 import { useState, useEffect } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import Image from "next/image"
-import { useResponsive } from "./hooks/useResponsive";
+import { useResponsive } from "../hooks/useResponsive";
 
 export default function Header() {
     const { isMobile, isDesktop, isTablet } = useResponsive();
@@ -23,7 +23,7 @@ export default function Header() {
 
     if (isDesktop) {
         return (
-            <header id="header" className={`flex justify-between pl-4 pr-4 md:pl-16 md:pr-16 lg:pl-16 lg:pr-16 pt-4 md:pt-5 md:pb-3 lg:pb-3 `}> { /*i removed "sticky top-0 z-50"*/}
+            <header role="banner" aria-label="Site header" className={`flex justify-between pl-4 pr-4 md:pl-16 md:pr-16 lg:pl-16 lg:pr-16 pt-4 md:pt-5 md:pb-3 lg:pb-3 `}> { /*i removed "sticky top-0 z-50"*/}
                 <div className="flex gap-8 items-center">
                     <div>
                         <Image
@@ -48,6 +48,7 @@ export default function Header() {
                 </div>
                 <div className="flex justify-end items-center gap-2 p-4 bg-[#885c4c] rounded-lg hover:bg-[#7e594b] transition-all duration-300 cursor-pointer">
                     <button
+                        aria-label="Order via WhatsApp"
                         className="flex justify-center items-center gap-2"
                         onClick={() => window.open("https://wa.me/201098556176", "_blank")}
                     >
@@ -120,3 +121,13 @@ export default function Header() {
         );
     }
 }
+
+
+// whatsapp link: https://wa.me/201098556176
+// youtube link: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+// linkedin link: https://www.linkedin.com/company/bakery-boomeg/
+// twitter link: https://x.com/bakeryboomeg
+// instagram link: https://www.instagram.com/bakeryboomeg/
+// facebook link: https://www.facebook.com/bakeryboomeg/
+// youtube link: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+

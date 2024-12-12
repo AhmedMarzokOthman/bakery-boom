@@ -1,27 +1,13 @@
-import Footer from "@/components/footer";
-import Header from "@/components/header";
+import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/Header";
 import SwippingImages from "@/components/swippingImages";
-import AboutUs from "@/components/aboutUs";
+import AboutUs from "@/components/sections/AboutUs";
 import HowItHappensComponent from "@/components/howItHappensComponent";
 import DarkModeComponent from "@/components/darkModeComponent";
 import OnlyFreshBreadComponent from "@/components/onlyFreshBreadComponent";
-import Products from "@/components/products";
+import Products from "@/components/sections/Products";
 import FeedbackComponent from "@/components/feedbackComponent";
 export default function Home() {
-
-  const links = [{
-    href: "#product",
-    text: "Product"
-  }, {
-    href: "#home",
-    text: "About"
-  }, {
-    href: "#contact",
-    text: "Contact Us"
-  },
-  ]
-
-
 
   return (
     <div id="home" className={`dark:text-white scroll-smooth`}>

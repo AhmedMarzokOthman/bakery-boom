@@ -81,11 +81,13 @@ export default function SwippingImages() {
                                     <Image
                                         src={image}
                                         alt="Background"
-                                        // fill
                                         width={2000}
                                         height={2000}
-                                        sizes="100vw"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 2000px"
                                         priority={index === 0}
+                                        quality={75}
+                                        placeholder="blur"
+                                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRg..."
                                         unoptimized
                                         className="rounded-xl object-cover"
                                     />

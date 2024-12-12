@@ -3,7 +3,7 @@
 import { PiWhatsappLogoThin } from "react-icons/pi";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { CiTwitter } from "react-icons/ci";
-import { useResponsive } from "./hooks/useResponsive";
+import { useResponsive } from "../hooks/useResponsive";
 
 export default function Footer() {
     const { isDesktop, isMobile, isTablet } = useResponsive();

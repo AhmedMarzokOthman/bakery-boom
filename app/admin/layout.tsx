@@ -1,14 +1,14 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import "../globals.css";
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+  src: "../fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+  src: "../fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
 });
@@ -20,21 +20,15 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Bakery Boom - Fresh Artisanal Bread & Pastries",
-  description: "Home bakery craft and bread. We specialize in fresh, artisanal bread and pastries made with natural ingredients and traditional baking methods.",
-  keywords: "bakery, bread, pastries, fresh bread, artisanal bread",
-  openGraph: {
-    title: "Bakery Boom - Fresh Artisanal Bread & Pastries",
-    description: "Fresh, artisanal bread and pastries made with natural ingredients.",
-    images: ['/logo.png'],
-  },
-  robots: "index, follow",
+  title: "Bakery Boom - Admin",
+  description: "Admin panel for Bakery Boom",
+  robots: "noindex, nofollow",
   icons: {
     icon: '/bakeryStoreIcon.ico',
   }
 };
 
-export default function RootLayout({
+export default function AdminLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

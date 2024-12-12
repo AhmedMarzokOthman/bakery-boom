@@ -1,0 +1,36 @@
+"admins": {
+    "admin": {
+        "username": "",
+        "password": ""
+    }
+}
+
+
+"datas": {
+    "swipingImages": [],
+    "aboutUs": [],
+    "howItHappensVideoLink": "",
+    "productCatalog": {
+        "productName": "",
+        "productPrice": "",
+        "productImage": ""
+    },
+    "feedBacks": [
+        {
+            "name": "",
+            "phone": "",
+            "email": "",
+            "message": ""
+        }
+    ],
+    "contactUs": {
+        "email": "",
+        "phone": "",
+        "whatsapp": "",
+        "facebook": "",
+        "instagram": "",
+        "youtube": "",
+        "linkedin": "",
+        "twitter": ""
+    }
+}

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { useResponsive } from "./hooks/useResponsive";
+import { useResponsive } from "../hooks/useResponsive";
 import { useState } from "react";
 
 export default function Products() {
