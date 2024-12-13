@@ -3,14 +3,14 @@
 import { PiWhatsappLogoThin } from "react-icons/pi";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { CiTwitter } from "react-icons/ci";
-import { useResponsive } from "../hooks/useResponsive";
+import { useResponsive } from "../../hooks/useResponsive";
 
 export default function Footer() {
     const { isDesktop, isMobile, isTablet } = useResponsive();
 
     if (isDesktop) {
         return (
-            <footer className="bg-[#333333] w-full h-[40vh] flex flex-col">
+            <footer id="footer" className="bg-[#333333] w-full h-[40vh] flex flex-col">
                 <nav className="flex flex-row justify-center items-center gap-5 pt-10">
                     <a href="#home" className="text-white">Home</a>
                     <p className="text-[#f6c686]">|</p>

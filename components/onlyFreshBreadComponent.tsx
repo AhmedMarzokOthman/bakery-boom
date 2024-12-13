@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useResponsive } from "./hooks/useResponsive";
+import { useResponsive } from "../hooks/useResponsive";
 
 export default function OnlyFreshBreadComponent() {
     const { isDesktop, isMobile, isTablet } = useResponsive();

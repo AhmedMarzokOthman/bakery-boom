@@ -4,7 +4,7 @@ import { Menu } from "lucide-react";
 import { useState, useEffect } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import Image from "next/image"
-import { useResponsive } from "../hooks/useResponsive";
+import { useResponsive } from "../../hooks/useResponsive";
 
 export default function Header() {
     const { isMobile, isDesktop, isTablet } = useResponsive();
@@ -17,7 +17,7 @@ export default function Header() {
         href: "#feedback",
         text: "Feedback"
     }, {
-        href: "#contact",
+        href: "#footer",
         text: "Contact Us"
     }];
 
@@ -121,13 +121,3 @@ export default function Header() {
         );
     }
 }
-
-
-// whatsapp link: https://wa.me/201098556176
-// youtube link: https://www.youtube.com/watch?v=dQw4w9WgXcQ
-// linkedin link: https://www.linkedin.com/company/bakery-boomeg/
-// twitter link: https://x.com/bakeryboomeg
-// instagram link: https://www.instagram.com/bakeryboomeg/
-// facebook link: https://www.facebook.com/bakeryboomeg/
-// youtube link: https://www.youtube.com/watch?v=dQw4w9WgXcQ
-

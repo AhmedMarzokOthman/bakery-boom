@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   }
 };
 
-export default function AdminLayout({
+export default function ContactUsLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

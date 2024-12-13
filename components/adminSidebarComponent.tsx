@@ -1,18 +1,26 @@
 "use client"
 
-import { FiSidebar } from "react-icons/fi";
+import { FiLogOut, FiSidebar } from "react-icons/fi";
 import { VscFeedback } from "react-icons/vsc";
 import { RxDashboard } from "react-icons/rx";
-import { useRouter } from "next/navigation";
 import { GrContact } from "react-icons/gr";
 import Image from "next/image";
-
+import { signOut } from "next-auth/react";
 import { useState, useEffect } from "react";
+import { Button } from "./ui/button";
+import { useRouter } from "next/navigation";
+import { Loader2 } from "lucide-react";
 
 export default function AdminSidebarComponent() {
     const router = useRouter();
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-    const [isCurrentPage, setIsCurrentPage] = useState("/admin/dashboard");
+    const [isLoading, setIsLoading] = useState(false);
+    const [isCurrentPage, setIsCurrentPage] = useState("");
+
+    useEffect(() => {
+        setIsCurrentPage(window.location.pathname);
+    }, []);
+
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
@@ -39,19 +47,31 @@ export default function AdminSidebarComponent() {
         {
             name: "Dashboard",
             icon: <RxDashboard />,
-            href: "/admin/dashboard"
+            href: "/dashboard"
         },
         {
             name: "Feedbacks",
             icon: <VscFeedback />,
-            href: "/admin/feedbacks"
+            href: "/feedbacks"
         },
         {
             name: "Contact Us",
             icon: <GrContact />,
-            href: "/admin/contact-us"
+            href: "/contact-us"
         },
-    ]
+        {
+            name: "Sign Out",
+            icon: <FiLogOut />,
+            href: "/admin/auth"
+        },
+    ];
+
+
+    if (isLoading) {
+        return <div className="flex justify-center items-center h-screen">
+            <Loader2 className="animate-spin text-2xl" />
+        </div>
+    }
 
     return (
         <div title="Sidebar" className={`flex flex-col gap-y-5 w-[220px] h-screen bg-[#333333]
@@ -77,22 +97,43 @@ export default function AdminSidebarComponent() {
             <div className="relative">
                 <div className="flex flex-col gap-y-5 ">
                     {tabs.map((tab, index) => (
-                        <h1
+                        <div
                             className={`text-[20px] font-semibold hover:text-gray-300 cursor-pointer 
                                 hover:bg-gray-50 hover:bg-opacity-10 ${isCurrentPage === tab.href ? 'bg-gray-50 bg-opacity-10' : ''} p-2`}
                             key={index}
                         >
-                            {!isSidebarOpen ?
-                                tab.icon :
-                                <a
-                                    href={tab.href}
-                                    className="flex items-center gap-x-2"
-                                    onClick={() => setIsCurrentPage(tab.href)}
+                            {!isSidebarOpen ? (
+                                <button
+                                    onClick={() => {
+                                        setIsCurrentPage(tab.href);
+                                        if (tab.name === "Sign Out") {
+                                            signOut({ redirect: true, callbackUrl: '/admin/auth' });
+                                        } else {
+                                            router.push(tab.href);
+                                        }
+                                    }}
+                                    className="flex items-center justify-center w-full"
+                                    aria-label={tab.name}
                                 >
-                                    {tab.icon} {tab.name}
-                                </a>
-                            }
-                        </h1>
+                                    {tab.icon}
+                                </button>
+                            ) : (
+                                <button
+                                    className="flex items-center gap-x-2 w-full"
+                                    onClick={() => {
+                                        setIsCurrentPage(tab.href);
+                                        if (tab.name === "Sign Out") {
+                                            signOut({ redirect: true, callbackUrl: '/admin/auth' });
+                                        } else {
+                                            router.push(tab.href);
+                                        }
+                                    }}
+                                >
+                                    {tab.icon}
+                                    <span>{tab.name}</span>
+                                </button>
+                            )}
+                        </div>
 
                     ))}
                 </div>

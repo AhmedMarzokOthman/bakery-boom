@@ -1,6 +1,6 @@
 "use client";
 
-import { useResponsive } from "./hooks/useResponsive";
+import { useResponsive } from "../hooks/useResponsive";
 import Image from "next/image";
 
 export default function FeedbackComponent() {

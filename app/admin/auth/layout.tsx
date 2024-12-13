@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "../../globals.css";
-
+import { AuthProvider } from "@/app/providers/Provides";
 const geistSans = localFont({
   src: "../../fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   }
 };
 
-export default function FeedbacksLayout({
+export default function AdminSigninSignupLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -38,7 +38,9 @@ export default function FeedbacksLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <AuthProvider>
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );
