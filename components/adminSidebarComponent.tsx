@@ -85,14 +85,16 @@ export default function AdminSidebarComponent() {
                 />
             </div>
             <div title="Logo Image">
-                <Image
-                    className="invert w-full border-b border-gray-500 p-2"
-                    src={`${isSidebarOpen ? '/logo.png' : '/logo-small.png'}`}
-                    alt="Logo"
-                    width={500}
-                    priority
-                    height={500}
-                />
+                <a href="/">
+                    <Image
+                        className="invert w-full border-b border-gray-500 p-2"
+                        src={`${isSidebarOpen ? '/logo.png' : '/logo-small.png'}`}
+                        alt="Logo"
+                        width={500}
+                        priority
+                        height={500}
+                    />
+                </a>
             </div>
             <div className="relative">
                 <div className="flex flex-col gap-y-5 ">
@@ -141,3 +143,5 @@ export default function AdminSidebarComponent() {
         </div>
     );
 }
+
+

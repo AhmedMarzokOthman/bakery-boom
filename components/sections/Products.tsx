@@ -12,12 +12,12 @@ export default function Products() {
     const products = [
         {
             name: "Soft Bread",
-            image: "https://wallpapercave.com/wp/wp3072642.jpg",
+            image: "/soft-bread.png",
             price: 3 + "$"
         },
         {
             name: "Butter Cakes",
-            image: "https://wallpapercave.com/wp/wp3072549.jpg",
+            image: "/butter-cakes.png",
             price: 4 + "$"
         },
         {
@@ -82,7 +82,7 @@ export default function Products() {
                             {/* Image Container */}
                             <div className="relative w-full aspect-square overflow-hidden bg-gray-50/5 
                                           flex items-center justify-center">
-                                <div className="relative w-3/4 h-3/4">
+                                <div className="relative w-[60%] h-3/4">
                                     <Image
                                         src={product.image}
                                         alt={product.name}
@@ -110,7 +110,7 @@ export default function Products() {
 
 
                                 {/* Hover Overlay Button */}
-                                {/* <div className="absolute flex-row inset-0 flex items-start pt-5 justify-center 
+                                <div className="absolute flex-row inset-0 flex items-start pt-5 justify-center 
                                               opacity-0 transition-opacity duration-300
                                               group-hover:opacity-100">
                                     <button className="px-6 py-2 dark:text-white text-[#3f3f3f] font-medium
@@ -122,7 +122,7 @@ export default function Products() {
                                         <span className="mx-2 whitespace-nowrap">{product.name}</span>
                                         <hr className="flex-grow w-20 h-0.5 bg-current border-1 border-yellow-500 text-yellow-500 rounded-full" />
                                     </button>
-                                </div> */}
+                                </div>
                             </div>
                         </div>
                     ))}

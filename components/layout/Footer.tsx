@@ -10,7 +10,7 @@ export default function Footer() {
 
     if (isDesktop) {
         return (
-            <footer id="footer" className="bg-[#333333] w-full h-[40vh] flex flex-col">
+            <footer id="footer" className="bg-[#333333] w-full h-[40%] flex flex-col">
                 <nav className="flex flex-row justify-center items-center gap-5 pt-10">
                     <a href="#home" className="text-white">Home</a>
                     <p className="text-[#f6c686]">|</p>
@@ -31,7 +31,7 @@ export default function Footer() {
                             className="text-white text-5xl cursor-pointer"
                         />
                         <PiWhatsappLogoThin
-                            onClick={() => window.open("https://wa.me/201098556176", "_blank")}
+                            onClick={() => window.open("https://wa.me/201153612009", "_blank")}
                             className="text-white text-5xl cursor-pointer"
                         />
 
@@ -42,9 +42,12 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="flex flex-row justify-center items-center gap-5 pt-10">
-                    <p className="text-white text-center pt-10">Phone: +201098556176</p>
-                    <p className="text-white text-center pt-10">Email: bakeryboomeg@gmail.com</p>
+                <div className="flex flex-col justify-center items-center pt-10">
+                    <div className="flex flex-row justify-center items-center gap-5">
+                        <p className="text-white text-center pt-10">Phone: +201153612009</p>
+                        <p className="text-white text-center pt-10">Email: bakeryboomeg@gmail.com</p>
+                    </div>
+                    <p className="text-white/50 text-center pt-10">Copyright © 2023 by Ahmed Marzok</p>
                 </div>
             </footer>
         );
@@ -52,7 +55,7 @@ export default function Footer() {
 
     if (isTablet) {
         return (
-            <footer id="footer" className="bg-[#333333] w-full h-[40vh] flex flex-col">
+            <footer id="footer" className="bg-[#333333] w-full h-[40%] flex flex-col">
                 <nav className="w-full flex flex-wrap justify-center items-center gap-2 pt-10">
                     <a href="#home" className="text-white">Home</a>
                     <p className="text-[#f6c686]">|</p>
@@ -83,9 +86,12 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="flex flex-row justify-center items-center gap-5 pt-10">
-                    <p className="text-white text-center pt-10">Phone: +201098556176</p>
-                    <p className="text-white text-center pt-10">Email: bakeryboomeg@gmail.com</p>
+                <div className="flex flex-col justify-center items-center pt-10">
+                    <div className="flex flex-row justify-center items-center gap-5">
+                        <p className="text-white text-center pt-10">Phone: +201153612009</p>
+                        <p className="text-white text-center pt-10">Email: bakeryboomeg@gmail.com</p>
+                    </div>
+                    <p className="text-white/50 text-center pt-10">Copyright © 2023 by Ahmed Marzok</p>
                 </div>
             </footer>
         );
@@ -93,7 +99,7 @@ export default function Footer() {
 
     if (isMobile) {
         return (
-            <footer id="footer" className="bg-[#333333] w-full h-[60vh] flex flex-col">
+            <footer id="footer" className="bg-[#333333] w-full h-[40%] flex flex-col">
                 <nav className="w-full flex flex-wrap justify-center items-center gap-2 pt-10">
                     <a href="#home" className="text-white">Home</a>
                     <p className="text-[#f6c686]">|</p>
@@ -124,9 +130,12 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="flex flex-col justify-center items-center gap-5 pt-10">
-                    <p className="text-white text-center pt-10">Phone: +201098556176</p>
-                    <p className="text-white text-center pt-10">Email: bakeryboomeg@gmail.com</p>
+                <div className="flex flex-col justify-center items-center pt-10">
+                    <div className="flex flex-row justify-center items-center gap-5">
+                        <p className="text-white text-center pt-10">Phone: +201153612009</p>
+                        <p className="text-white text-center pt-10">Email: bakeryboomeg@gmail.com</p>
+                    </div>
+                    <p className="text-white/50 text-center pt-10">Copyright © 2023 by Ahmed Marzok</p>
                 </div>
             </footer>
         );

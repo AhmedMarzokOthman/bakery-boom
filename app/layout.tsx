@@ -29,9 +29,6 @@ export const metadata: Metadata = {
     images: ['/logo.png'],
   },
   robots: "index, follow",
-  icons: {
-    icon: '/bakeryStoreIcon.ico',
-  }
 };
 
 export default function RootLayout({

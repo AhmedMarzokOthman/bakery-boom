@@ -24,7 +24,7 @@ export default function OnlyFreshBreadComponent() {
                 </div>
 
                 <Image
-                    src="https://img.freepik.com/premium-photo/basket-bread-buns_501761-2688.jpg"
+                    src="/breadBasket3.png"
                     alt="bread"
                     width={500}
                     height={500}
@@ -53,7 +53,7 @@ export default function OnlyFreshBreadComponent() {
                 </div>
 
                 <Image
-                    src="https://img.freepik.com/premium-photo/basket-bread-buns_501761-2688.jpg"
+                    src="/breadBasket3.png"
                     alt="bread"
                     width={300}
                     height={300}
@@ -69,7 +69,7 @@ export default function OnlyFreshBreadComponent() {
             <article className="flex flex-col mb-10">
                 <div className="flex justify-center w-[90%] mx-auto rounded-t-md overflow-hidden pr-10 pl-10">
                     <Image
-                        src="https://img.freepik.com/premium-photo/basket-bread-buns_501761-2688.jpg"
+                        src="/breadBasket3.png"
                         alt="bread"
                         width={500}
                         height={500}

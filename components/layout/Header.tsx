@@ -50,12 +50,12 @@ export default function Header() {
                     <button
                         aria-label="Order via WhatsApp"
                         className="flex justify-center items-center gap-2"
-                        onClick={() => window.open("https://wa.me/201098556176", "_blank")}
+                        onClick={() => window.open("https://wa.me/201153612009", "_blank")}
                     >
                         <FaWhatsapp className="text-white w-[35px] h-[35px]" />
                         <div className="flex flex-col items-start">
                             <span className="text-white font-medium text-sm">Order Now</span>
-                            <span className="text-white font-medium text-sm">+20 1098556176</span>
+                            <span className="text-white font-medium text-sm">+20 1153612009</span>
                         </div>
                     </button>
                 </div>
